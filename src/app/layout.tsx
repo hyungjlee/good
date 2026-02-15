@@ -45,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`${pretendard.variable} ${cormorant.variable}`}>
+    <html lang="ko" className={cormorant.variable}>
       <head>
         <script
           src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"
@@ -53,7 +53,7 @@ export default function RootLayout({
           async
         />
       </head>
-      <body className="bg-bg text-text font-body">
+      <body className={`${pretendard.className} bg-bg text-text`}>
         <main className="max-w-[430px] mx-auto min-h-dvh bg-bg-card shadow-[0_0_60px_rgba(0,0,0,0.08)]">
           {children}
         </main>
