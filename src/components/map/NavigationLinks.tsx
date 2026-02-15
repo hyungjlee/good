@@ -11,7 +11,7 @@ export default function NavigationLinks({ lat, lng, venueName, address }: Naviga
   const navApps = [
     {
       name: "네이버지도",
-      url: `https://map.naver.com/v5/search/${encodeURIComponent(address)}`,
+      url: `https://map.naver.com/v5/search/${encodeURIComponent(venueName)}`,
     },
     {
       name: "카카오내비",
@@ -19,7 +19,7 @@ export default function NavigationLinks({ lat, lng, venueName, address }: Naviga
     },
     {
       name: "티맵",
-      url: `https://tmap.life/route/car?goalx=${lng}&goaly=${lat}&goalname=${encodeURIComponent(venueName)}`,
+      url: `tmap://route?goalname=${encodeURIComponent(venueName)}&goalx=${lng}&goaly=${lat}`,
     },
   ];
 
