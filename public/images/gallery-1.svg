@@ -1,0 +1,18 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='800' height='1200' viewBox='0 0 800 1200'>
+  <defs>
+    <linearGradient id='bg' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0%' stop-color='#F7F2EB'/>
+      <stop offset='100%' stop-color='#EEE5D6'/>
+    </linearGradient>
+  </defs>
+  <rect width='800' height='1200' fill='url(#bg)'/>
+  <g transform='translate(400,480)' opacity='0.2'>
+    <circle cx='0' cy='-40' r='50' fill='#C9A96E'/>
+    <circle cx='-40' cy='-10' r='40' fill='#D4B978'/>
+    <circle cx='40' cy='-10' r='40' fill='#D4B978'/>
+    <circle cx='-22' cy='-65' r='32' fill='#E0CFA8'/>
+    <circle cx='22' cy='-65' r='32' fill='#E0CFA8'/>
+    <rect x='-5' y='25' width='10' height='90' rx='4' fill='#A88B4A' opacity='0.6'/>
+  </g>
+  <text x='400' y='720' text-anchor='middle' fill='#C9A96E' font-size='13' font-family='Georgia, serif' letter-spacing='5' opacity='0.45'>BOUQUET</text>
+</svg>
