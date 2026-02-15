@@ -15,8 +15,6 @@ export default function GreetingSection() {
         {greeting.message}
       </p>
 
-      <div className="divider mb-10" />
-
       {/* Parents */}
       <div className="text-sm text-text-light space-y-3">
         <div className="flex items-center justify-center gap-2">

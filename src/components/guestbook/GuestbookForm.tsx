@@ -61,15 +61,20 @@ export default function GuestbookForm({ onSubmitted, onToast }: GuestbookFormPro
         maxLength={20}
         required
       />
-      <textarea
-        value={form.message}
-        onChange={(e) => setForm({ ...form, message: e.target.value })}
-        className="w-full border border-border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-primary transition-colors resize-none"
-        rows={3}
-        placeholder="축하 메시지를 남겨주세요 (최대 500자)"
-        maxLength={500}
-        required
-      />
+      <div className="relative">
+        <textarea
+          value={form.message}
+          onChange={(e) => setForm({ ...form, message: e.target.value })}
+          className="w-full border border-border rounded-lg px-3 py-2 pb-7 text-sm focus:outline-none focus:border-primary transition-colors resize-none"
+          rows={3}
+          placeholder="축하 메시지를 남겨주세요 (최대 500자)"
+          maxLength={500}
+          required
+        />
+        <span className="absolute bottom-2 right-3 text-[11px] text-text-muted pointer-events-none">
+          {form.message.length}/500
+        </span>
+      </div>
       <Button type="submit" disabled={loading} variant="outline" className="w-full">
         {loading ? "등록 중..." : "메시지 남기기"}
       </Button>

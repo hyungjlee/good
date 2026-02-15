@@ -10,10 +10,7 @@ export default function AccountSection() {
   const { groomAccounts, brideAccounts } = weddingConfig;
   const [toastMessage, setToastMessage] = useState("");
 
-  const allAccounts = [
-    ...groomAccounts.accounts.map((a) => ({ ...a, side: groomAccounts.label })),
-    ...brideAccounts.accounts.map((a) => ({ ...a, side: brideAccounts.label })),
-  ];
+  const groups = [groomAccounts, brideAccounts];
 
   return (
     <AnimatedSection className="py-16 px-6">
@@ -25,21 +22,28 @@ export default function AccountSection() {
         </p>
       </div>
 
-      <div className="space-y-4">
-        {allAccounts.map((account, idx) => (
-          <div
-            key={idx}
-            className="border border-border rounded-xl px-5 py-4 flex items-center justify-between"
-          >
-            <div>
-              <p className="text-[11px] text-primary font-medium tracking-wide mb-1.5">
-                {account.side} · {account.holder}
-              </p>
-              <p className="text-sm text-text tracking-wide">
-                {account.bank} {account.number}
-              </p>
+      <div className="space-y-6">
+        {groups.map((group) => (
+          <div key={group.label}>
+            <p className="text-xs text-text-muted font-medium mb-2.5">{group.label}</p>
+            <div className="space-y-3">
+              {group.accounts.map((account, idx) => (
+                <div
+                  key={idx}
+                  className="border border-border rounded-xl px-5 py-4 flex items-center justify-between"
+                >
+                  <div>
+                    <p className="text-[11px] text-primary font-medium tracking-wide mb-1.5">
+                      {account.holder}
+                    </p>
+                    <p className="text-sm text-text tracking-wide">
+                      {account.bank} {account.number}
+                    </p>
+                  </div>
+                  <CopyButton text={account.number} />
+                </div>
+              ))}
             </div>
-            <CopyButton text={account.number} />
           </div>
         ))}
       </div>

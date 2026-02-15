@@ -29,11 +29,16 @@ interface KakaoShareParams {
 }
 
 export function shareKakao({ title, description, imageUrl, linkUrl }: KakaoShareParams) {
-  if (!window.Kakao?.isInitialized()) {
+  if (!window.Kakao) {
+    alert("카카오 SDK를 불러오는 중입니다. 잠시 후 다시 시도해주세요.");
+    return;
+  }
+
+  if (!window.Kakao.isInitialized()) {
     initKakao();
   }
 
-  window.Kakao?.Share.sendDefault({
+  window.Kakao.Share.sendDefault({
     objectType: "feed",
     content: {
       title,

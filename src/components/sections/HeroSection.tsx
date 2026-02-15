@@ -21,7 +21,7 @@ export default function HeroSection() {
           sizes="430px"
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/60" />
       </div>
 
       {/* Text Overlay */}

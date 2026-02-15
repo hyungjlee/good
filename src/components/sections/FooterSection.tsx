@@ -20,7 +20,7 @@ export default function FooterSection() {
   };
 
   return (
-    <AnimatedSection className="py-12 px-6 pb-safe">
+    <AnimatedSection className="py-16 px-6 pb-safe">
       <div className="space-y-3">
         <KakaoShareButton />
 

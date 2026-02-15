@@ -31,7 +31,7 @@ export default function NavigationLinks({ lat, lng, venueName, address }: Naviga
             href={app.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-text-light hover:text-primary transition-colors py-1"
+            className="text-sm text-text-light hover:text-primary transition-colors py-2.5 px-1"
           >
             {app.name}
           </a>

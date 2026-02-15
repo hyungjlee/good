@@ -15,7 +15,7 @@ export default function KakaoShareButton() {
   return (
     <button
       onClick={share}
-      className="flex items-center justify-center gap-2 w-full py-3 rounded-lg text-sm font-medium transition-colors"
+      className="flex items-center justify-center gap-2 w-full py-3 rounded-lg text-sm font-medium transition-colors active:brightness-95"
       style={{ backgroundColor: "#FEE500", color: "#191919" }}
     >
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">

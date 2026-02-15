@@ -20,7 +20,7 @@ export default function GuestbookEntry({ entry, onDelete }: GuestbookEntryProps)
           </span>
           <button
             onClick={() => onDelete(entry.id)}
-            className="text-[10px] text-text-muted hover:text-red-400 transition-colors"
+            className="text-xs text-text-muted hover:text-red-400 transition-colors px-2 py-1 -mr-2"
           >
             삭제
           </button>

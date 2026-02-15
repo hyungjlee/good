@@ -3,12 +3,12 @@
 @theme {
   --color-primary: #C9A96E;
   --color-primary-light: #E0CFA8;
-  --color-primary-dark: #A88B4A;
+  --color-primary-dark: #8B7238;
   --color-bg: #FDFBF7;
   --color-bg-card: #FFFFFF;
   --color-text: #2D2D2D;
   --color-text-light: #6B6B6B;
-  --color-text-muted: #9B9B9B;
+  --color-text-muted: #767676;
   --color-border: #E8E4DE;
   --color-divider: #F0EDE8;
   --font-body: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -41,7 +41,7 @@
     font-weight: 400;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--color-primary);
+    color: var(--color-primary-dark);
     margin-bottom: 0.5rem;
   }
 

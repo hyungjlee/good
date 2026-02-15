@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "motion/react";
 import type { GalleryImage } from "@/types/wedding";
 
 interface GalleryGridProps {
@@ -12,8 +13,12 @@ export default function GalleryGrid({ images, onImageClick }: GalleryGridProps) 
   return (
     <div className="grid grid-cols-3 gap-0.5">
       {images.map((image, index) => (
-        <button
+        <motion.button
           key={index}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: index * 0.08 }}
           onClick={() => onImageClick(index)}
           className="relative aspect-square overflow-hidden"
         >
@@ -25,7 +30,7 @@ export default function GalleryGrid({ images, onImageClick }: GalleryGridProps) 
             sizes="(max-width: 430px) 33vw, 143px"
             loading="lazy"
           />
-        </button>
+        </motion.button>
       ))}
     </div>
   );

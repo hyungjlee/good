@@ -113,8 +113,8 @@ export default function GuestbookList({ refreshKey, onToast }: GuestbookListProp
             취소
           </Button>
           <Button
-            variant="primary"
-            className="flex-1 !bg-red-500 hover:!bg-red-600"
+            variant="danger"
+            className="flex-1"
             onClick={handleDelete}
             disabled={deleting || !deletePassword}
           >

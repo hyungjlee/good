@@ -54,7 +54,8 @@ export default function GalleryLightbox({
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 z-10 text-white/80 hover:text-white p-2"
+            aria-label="갤러리 닫기"
+            className="absolute top-4 right-4 z-10 text-white/80 hover:text-white p-3"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
@@ -70,8 +71,18 @@ export default function GalleryLightbox({
           <motion.div
             key={currentIndex}
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.2 }}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.4}
+            onDragEnd={(_, info) => {
+              if (info.offset.x > 80 && currentIndex > 0) {
+                onNavigate(currentIndex - 1);
+              } else if (info.offset.x < -80 && currentIndex < images.length - 1) {
+                onNavigate(currentIndex + 1);
+              }
+            }}
             className="relative w-full h-full flex items-center justify-center p-4"
           >
             <Image
@@ -88,7 +99,8 @@ export default function GalleryLightbox({
           {currentIndex > 0 && (
             <button
               onClick={() => onNavigate(currentIndex - 1)}
-              className="absolute left-2 top-1/2 -translate-y-1/2 text-white/60 hover:text-white p-2"
+              aria-label="이전 사진"
+              className="absolute left-2 top-1/2 -translate-y-1/2 text-white/60 hover:text-white p-3"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -98,7 +110,8 @@ export default function GalleryLightbox({
           {currentIndex < images.length - 1 && (
             <button
               onClick={() => onNavigate(currentIndex + 1)}
-              className="absolute right-2 top-1/2 -translate-y-1/2 text-white/60 hover:text-white p-2"
+              aria-label="다음 사진"
+              className="absolute right-2 top-1/2 -translate-y-1/2 text-white/60 hover:text-white p-3"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M9 18l6-6-6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
