@@ -43,6 +43,12 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
         />
+        <script
+          src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"
+          integrity="sha384-DKYJZ8NLiK8MN4/C5P2ezmFnkrysYIcCZ8lXB0kTiO+jyFKOaScqFMddoJRUiPC"
+          crossOrigin="anonymous"
+          async
+        />
       </head>
       <body className="bg-bg text-text">
         <main className="max-w-[430px] mx-auto min-h-dvh bg-bg-card shadow-[0_0_40px_rgba(0,0,0,0.05)]">

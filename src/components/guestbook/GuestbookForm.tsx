@@ -43,26 +43,24 @@ export default function GuestbookForm({ onSubmitted, onToast }: GuestbookFormPro
 
   return (
     <form onSubmit={handleSubmit} className="space-y-3">
-      <div className="flex gap-2">
-        <input
-          type="text"
-          value={form.name}
-          onChange={(e) => setForm({ ...form, name: e.target.value })}
-          className="flex-1 border border-border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-primary transition-colors"
-          placeholder="이름"
-          maxLength={20}
-          required
-        />
-        <input
-          type="password"
-          value={form.password}
-          onChange={(e) => setForm({ ...form, password: e.target.value })}
-          className="flex-1 border border-border rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-primary transition-colors"
-          placeholder="비밀번호"
-          maxLength={20}
-          required
-        />
-      </div>
+      <input
+        type="text"
+        value={form.name}
+        onChange={(e) => setForm({ ...form, name: e.target.value })}
+        className="w-full border border-border rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-primary transition-colors"
+        placeholder="이름"
+        maxLength={20}
+        required
+      />
+      <input
+        type="password"
+        value={form.password}
+        onChange={(e) => setForm({ ...form, password: e.target.value })}
+        className="w-full border border-border rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-primary transition-colors"
+        placeholder="비밀번호 (삭제 시 필요)"
+        maxLength={20}
+        required
+      />
       <textarea
         value={form.message}
         onChange={(e) => setForm({ ...form, message: e.target.value })}

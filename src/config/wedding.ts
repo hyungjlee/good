@@ -58,7 +58,7 @@ const weddingConfig: WeddingConfig = {
     title: "이형준 ♥ 이아름 결혼합니다",
     description: "2026년 9월 13일 일요일 오전 11시, 아펠가모 선릉 4층",
     ogImage: "/images/og-image.svg",
-    siteUrl: "https://our-wedding.vercel.app",
+    siteUrl: "https://hj-areum.vercel.app",
     kakaoShareImage: "/images/kakao-share.svg",
   },
   design: {
