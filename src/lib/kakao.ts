@@ -10,15 +10,19 @@ declare global {
   }
 }
 
-export function initKakao() {
-  if (typeof window === "undefined") return;
-  if (!window.Kakao) return;
-  if (window.Kakao.isInitialized()) return;
+export function initKakao(): boolean {
+  if (typeof window === "undefined") return false;
+  if (!window.Kakao) return false;
+  if (window.Kakao.isInitialized()) return true;
 
   const key = process.env.NEXT_PUBLIC_KAKAO_APP_KEY;
-  if (key) {
-    window.Kakao.init(key);
+  if (!key) {
+    console.warn("NEXT_PUBLIC_KAKAO_APP_KEY 환경변수가 설정되지 않았습니다.");
+    return false;
   }
+
+  window.Kakao.init(key);
+  return window.Kakao.isInitialized();
 }
 
 interface KakaoShareParams {
@@ -35,7 +39,11 @@ export function shareKakao({ title, description, imageUrl, linkUrl }: KakaoShare
   }
 
   if (!window.Kakao.isInitialized()) {
-    initKakao();
+    const initialized = initKakao();
+    if (!initialized) {
+      alert("카카오 SDK 초기화에 실패했습니다.");
+      return;
+    }
   }
 
   window.Kakao.Share.sendDefault({

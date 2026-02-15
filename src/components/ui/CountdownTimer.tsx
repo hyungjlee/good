@@ -8,8 +8,12 @@ interface CountdownTimerProps {
 }
 
 export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
-  const { days, hours, minutes, seconds, isPast } = useCountdown(targetDate);
+  const { days, hours, minutes, seconds, isPast, mounted } = useCountdown(targetDate);
   const dday = getDday(targetDate);
+
+  if (!mounted) {
+    return <div className="h-[52px]" />;
+  }
 
   if (isPast) {
     return (
