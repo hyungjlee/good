@@ -12,7 +12,7 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
   const dday = getDday(targetDate);
 
   if (!mounted) {
-    return <div className="h-[52px]" />;
+    return <div className="min-h-[52px]" />;
   }
 
   if (isPast) {
@@ -37,7 +37,7 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
             <div className="text-xl font-light text-text tabular-nums">
               {String(item.value).padStart(2, "0")}
             </div>
-            <div className="text-[10px] text-text-muted mt-0.5">{item.label}</div>
+            <div className="text-xs text-text-muted mt-0.5">{item.label}</div>
           </div>
         ))}
       </div>

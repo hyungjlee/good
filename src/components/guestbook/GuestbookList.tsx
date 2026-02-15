@@ -95,7 +95,8 @@ export default function GuestbookList({ refreshKey, onToast }: GuestbookListProp
         onClose={() => { setDeleteTarget(null); setDeletePassword(""); }}
         title="메시지 삭제"
       >
-        <p className="text-sm text-text-light mb-4">비밀번호를 입력해주세요.</p>
+        <p className="text-sm text-text-light mb-1">비밀번호를 입력해주세요.</p>
+        <p className="text-xs text-text-muted mb-4">삭제된 메시지는 복구할 수 없습니다.</p>
         <input
           type="password"
           value={deletePassword}

@@ -25,7 +25,7 @@ export default function Calendar({ dateStr }: CalendarProps) {
           <div
             key={day}
             className={`text-center text-xs py-1 ${
-              i === 0 ? "text-rose-300" : i === 6 ? "text-slate-400" : "text-text-muted"
+              i === 0 ? "text-rose-400" : i === 6 ? "text-blue-400" : "text-text-muted"
             }`}
           >
             {day}
@@ -44,9 +44,9 @@ export default function Calendar({ dateStr }: CalendarProps) {
                 : day === weddingDay
                   ? "bg-primary text-white rounded-full font-medium"
                   : i % 7 === 0
-                    ? "text-rose-300"
+                    ? "text-rose-400"
                     : i % 7 === 6
-                      ? "text-slate-400"
+                      ? "text-blue-400"
                       : "text-text"
             }`}
           >

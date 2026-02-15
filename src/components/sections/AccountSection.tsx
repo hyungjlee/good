@@ -1,14 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import CopyButton from "@/components/ui/CopyButton";
-import Toast from "@/components/ui/Toast";
 import weddingConfig from "@/config/wedding";
 
 export default function AccountSection() {
   const { groomAccounts, brideAccounts } = weddingConfig;
-  const [toastMessage, setToastMessage] = useState("");
 
   const groups = [groomAccounts, brideAccounts];
 
@@ -33,7 +30,7 @@ export default function AccountSection() {
                   className="border border-border rounded-xl px-5 py-4 flex items-center justify-between"
                 >
                   <div>
-                    <p className="text-[11px] text-primary font-medium tracking-wide mb-1.5">
+                    <p className="text-xs text-primary font-medium tracking-wide mb-1.5">
                       {account.holder}
                     </p>
                     <p className="text-sm text-text tracking-wide">
@@ -48,11 +45,6 @@ export default function AccountSection() {
         ))}
       </div>
 
-      <Toast
-        message={toastMessage || "계좌번호가 복사되었습니다"}
-        isVisible={!!toastMessage}
-        onClose={() => setToastMessage("")}
-      />
     </AnimatedSection>
   );
 }

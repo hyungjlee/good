@@ -11,7 +11,7 @@ interface GalleryGridProps {
 
 export default function GalleryGrid({ images, onImageClick }: GalleryGridProps) {
   return (
-    <div className="grid grid-cols-3 gap-0.5">
+    <div className="grid grid-cols-3 gap-[3px]">
       {images.map((image, index) => (
         <motion.button
           key={index}

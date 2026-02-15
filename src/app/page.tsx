@@ -11,19 +11,19 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <div className="divider my-0" />
+      <div className="divider my-4" />
       <GreetingSection />
-      <div className="divider my-0" />
+      <div className="divider my-4" />
       <CalendarSection />
-      <div className="divider my-0" />
+      <div className="divider my-4" />
       <GallerySection />
-      <div className="divider my-0" />
+      <div className="divider my-4" />
       <LocationSection />
-      <div className="divider my-0" />
+      <div className="divider my-4" />
       <AccountSection />
-      <div className="divider my-0" />
+      <div className="divider my-4" />
       <GuestbookSection />
-      <div className="divider my-0" />
+      <div className="divider my-4" />
       <FooterSection />
     </>
   );

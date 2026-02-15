@@ -15,7 +15,7 @@ export default function GuestbookEntry({ entry, onDelete }: GuestbookEntryProps)
       <div className="flex items-center justify-between mb-1.5">
         <span className="text-sm font-medium text-text">{entry.name}</span>
         <div className="flex items-center gap-2">
-          <span className="text-[10px] text-text-muted">
+          <span className="text-xs text-text-muted">
             {format(new Date(entry.created_at), "yyyy.MM.dd", { locale: ko })}
           </span>
           <button

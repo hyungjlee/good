@@ -15,15 +15,13 @@ export const metadata: Metadata = {
     locale: "ko_KR",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.svg",
   },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
 };
 
 export default function RootLayout({
@@ -63,7 +61,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-bg text-text">
-        <main className="max-w-[430px] mx-auto min-h-dvh bg-bg-card shadow-[0_0_40px_rgba(0,0,0,0.05)]">
+        <main className="max-w-[430px] mx-auto min-h-dvh bg-bg-card shadow-[0_0_60px_rgba(0,0,0,0.08)]">
           {children}
         </main>
       </body>

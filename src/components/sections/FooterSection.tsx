@@ -21,6 +21,11 @@ export default function FooterSection() {
 
   return (
     <AnimatedSection className="py-16 px-6 pb-safe">
+      <div className="text-center mb-6">
+        <p className="section-title">Share</p>
+        <h2 className="section-heading">소식 전하기</h2>
+      </div>
+
       <div className="space-y-3">
         <KakaoShareButton />
 
@@ -37,7 +42,7 @@ export default function FooterSection() {
       </div>
 
       <div className="mt-12 text-center">
-        <p className="text-[10px] text-text-muted">
+        <p className="text-xs text-text-muted">
           Made with love
         </p>
       </div>
