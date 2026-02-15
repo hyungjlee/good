@@ -1,6 +1,21 @@
 import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
+import { Cormorant_Garamond } from "next/font/google";
 import weddingConfig from "@/config/wedding";
 import "./globals.css";
+
+const pretendard = localFont({
+  src: "../../public/fonts/PretendardVariable.woff2",
+  display: "swap",
+  variable: "--font-pretendard",
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "600"],
+  display: "swap",
+  variable: "--font-cormorant",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(weddingConfig.meta.siteUrl),
@@ -30,37 +45,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
+    <html lang="ko" className={`${pretendard.variable} ${cormorant.variable}`}>
       <head>
-        <link
-          rel="preconnect"
-          href="https://cdn.jsdelivr.net"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
-        />
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
-        />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap"
-        />
         <script
           src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"
           crossOrigin="anonymous"
           async
         />
       </head>
-      <body className="bg-bg text-text">
+      <body className="bg-bg text-text font-body">
         <main className="max-w-[430px] mx-auto min-h-dvh bg-bg-card shadow-[0_0_60px_rgba(0,0,0,0.08)]">
           {children}
         </main>
