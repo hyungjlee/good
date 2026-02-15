@@ -27,13 +27,24 @@ export function getDday(targetDate: string) {
   return `D+${Math.abs(days)}`;
 }
 
+/**
+ * ISO 문자열에서 KST 로컬 시간 부분만 추출하여 UTC로 해석합니다.
+ * 이렇게 하면 서버 타임존(UTC)에서도 항상 KST 기준 날짜/시간이 표시됩니다.
+ */
+function parseAsKST(dateStr: string) {
+  const match = dateStr.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/);
+  if (!match) return new Date(dateStr);
+  const [, y, m, d, h, min] = match;
+  return new Date(Date.UTC(+y, +m - 1, +d, +h, +min));
+}
+
 export function formatWeddingDate(dateStr: string) {
-  const date = new Date(dateStr);
+  const date = parseAsKST(dateStr);
   return format(date, "yyyy년 M월 d일 EEEE a h시", { locale: ko });
 }
 
 export function getCalendarDays(dateStr: string) {
-  const date = new Date(dateStr);
+  const date = parseAsKST(dateStr);
   const monthStart = startOfMonth(date);
   const startDay = getDay(monthStart);
   const daysInMonth = getDaysInMonth(date);
@@ -49,9 +60,9 @@ export function getCalendarDays(dateStr: string) {
   }
 
   return {
-    year: date.getFullYear(),
-    month: date.getMonth() + 1,
-    weddingDay: date.getDate(),
+    year: date.getUTCFullYear(),
+    month: date.getUTCMonth() + 1,
+    weddingDay: date.getUTCDate(),
     days,
   };
 }
