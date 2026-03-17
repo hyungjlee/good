@@ -3,7 +3,7 @@
 @theme {
   --color-primary: #C9A96E;
   --color-primary-light: #E0CFA8;
-  --color-primary-dark: #8B7238;
+  --color-primary-dark: #7D6530;
   --color-bg: #FDFBF7;
   --color-bg-card: #FFFFFF;
   --color-text: #2D2D2D;
@@ -37,7 +37,7 @@
 @layer components {
   .section-title {
     font-family: var(--font-accent);
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     font-weight: 400;
     letter-spacing: 0.2em;
     text-transform: uppercase;

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 interface ToastProps {
@@ -16,12 +16,15 @@ export default function Toast({
   onClose,
   duration = 2000,
 }: ToastProps) {
+  const onCloseRef = useRef(onClose);
+  onCloseRef.current = onClose;
+
   useEffect(() => {
     if (isVisible) {
-      const timer = setTimeout(onClose, duration);
+      const timer = setTimeout(() => onCloseRef.current(), duration);
       return () => clearTimeout(timer);
     }
-  }, [isVisible, onClose, duration]);
+  }, [isVisible, duration]);
 
   return (
     <AnimatePresence>

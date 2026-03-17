@@ -17,7 +17,7 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
 
   if (isPast) {
     return (
-      <p className="text-sm text-primary font-medium">{dday}</p>
+      <p className="text-sm text-primary-dark font-medium">{dday}</p>
     );
   }
 
@@ -30,7 +30,7 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
 
   return (
     <div>
-      <p className="text-xs text-primary font-medium mb-3">{dday}</p>
+      <p className="text-xs text-primary-dark font-medium mb-3">{dday}</p>
       <div className="flex justify-center gap-4">
         {items.map((item) => (
           <div key={item.label} className="text-center">

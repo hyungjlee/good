@@ -20,7 +20,7 @@ export default function HeroSection() {
           className="object-cover"
           sizes="430px"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/5 to-black/70" />
       </div>
 
       {/* Text Overlay */}
@@ -30,7 +30,7 @@ export default function HeroSection() {
         transition={{ duration: 0.8, delay: 0.3 }}
         className="absolute bottom-0 left-0 right-0 p-8 text-center text-white"
       >
-        <p className="font-accent text-xs tracking-[0.3em] uppercase mb-3 opacity-80">
+        <p className="font-accent text-sm tracking-[0.3em] uppercase mb-3 opacity-90">
           Wedding Invitation
         </p>
         <h1 className="text-2xl font-light tracking-wide mb-2">
@@ -38,10 +38,10 @@ export default function HeroSection() {
           <span className="inline-block mx-3 text-primary-light text-lg">&amp;</span>
           {bride.name}
         </h1>
-        <p className="text-sm opacity-80 font-light">
+        <p className="text-sm opacity-90 font-light">
           {formatWeddingDate(date)}
         </p>
-        <p className="text-sm opacity-70 font-light mt-1">
+        <p className="text-sm opacity-85 font-light mt-1">
           {venue.name} {venue.hall}
         </p>
 

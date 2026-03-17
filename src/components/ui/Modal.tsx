@@ -14,10 +14,12 @@ export default function Modal({ isOpen, onClose, children, title }: ModalProps) 
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
-      return () => {
-        document.body.style.overflow = "";
-      };
+    } else {
+      document.body.style.overflow = "";
     }
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [isOpen]);
 
   return (

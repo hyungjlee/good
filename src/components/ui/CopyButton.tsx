@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { copyToClipboard } from "@/lib/clipboard";
 
 interface CopyButtonProps {
   text: string;
@@ -18,20 +19,8 @@ export default function CopyButton({
   const [copied, setCopied] = useState(false);
 
   const handleCopy = useCallback(async () => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopied(true);
-      onCopied?.();
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      const textarea = document.createElement("textarea");
-      textarea.value = text;
-      textarea.style.position = "fixed";
-      textarea.style.opacity = "0";
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textarea);
+    const success = await copyToClipboard(text);
+    if (success) {
       setCopied(true);
       onCopied?.();
       setTimeout(() => setCopied(false), 2000);
@@ -43,8 +32,8 @@ export default function CopyButton({
       onClick={handleCopy}
       className={`text-xs border border-border rounded px-3 py-2 transition-colors ${
         copied
-          ? "bg-primary text-white border-primary"
-          : "text-text-light hover:border-primary hover:text-primary"
+          ? "bg-primary-dark text-white border-primary-dark"
+          : "text-text-light hover:border-primary hover:text-primary-dark"
       } ${className}`}
     >
       {copied ? "복사됨" : label}

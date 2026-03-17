@@ -1,9 +1,15 @@
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { createServerClient } from "@/lib/supabase/server";
+import { rateLimit, getClientIp } from "@/lib/rate-limit";
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
+    const ip = getClientIp(request);
+    if (!rateLimit(ip, { limit: 30, windowMs: 60_000 })) {
+      return NextResponse.json({ error: "요청이 너무 많습니다. 잠시 후 다시 시도해주세요." }, { status: 429 });
+    }
+
     const supabase = createServerClient();
     const { data, error } = await supabase
       .from("guestbook")
@@ -24,11 +30,24 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
+    const ip = getClientIp(request);
+    if (!rateLimit(ip, { limit: 5, windowMs: 60_000 })) {
+      return NextResponse.json({ error: "요청이 너무 많습니다. 잠시 후 다시 시도해주세요." }, { status: 429 });
+    }
+
     const body = await request.json();
     const { name, password, message } = body;
 
     if (!name?.trim() || !password?.trim() || !message?.trim()) {
       return NextResponse.json({ error: "모든 항목을 입력해주세요" }, { status: 400 });
+    }
+
+    if (name.trim().length > 20) {
+      return NextResponse.json({ error: "이름은 20자 이내로 입력해주세요" }, { status: 400 });
+    }
+
+    if (password.length > 50) {
+      return NextResponse.json({ error: "비밀번호는 50자 이내로 입력해주세요" }, { status: 400 });
     }
 
     if (message.length > 500) {
@@ -57,6 +76,11 @@ export async function POST(request: Request) {
 
 export async function DELETE(request: Request) {
   try {
+    const ip = getClientIp(request);
+    if (!rateLimit(ip, { limit: 10, windowMs: 60_000 })) {
+      return NextResponse.json({ error: "요청이 너무 많습니다. 잠시 후 다시 시도해주세요." }, { status: 429 });
+    }
+
     const body = await request.json();
     const { id, password } = body;
 
@@ -66,7 +90,6 @@ export async function DELETE(request: Request) {
 
     const supabase = createServerClient();
 
-    // Fetch the entry with password for verification
     const { data: entry, error: fetchError } = await supabase
       .from("guestbook")
       .select("id, password")

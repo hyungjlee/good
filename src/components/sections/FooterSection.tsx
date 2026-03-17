@@ -41,12 +41,6 @@ export default function FooterSection() {
         </button>
       </div>
 
-      <div className="mt-12 text-center">
-        <p className="text-xs text-text-muted">
-          Made with love
-        </p>
-      </div>
-
       <Toast
         message={toast.message}
         isVisible={toast.visible}

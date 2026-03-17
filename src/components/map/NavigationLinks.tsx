@@ -11,7 +11,7 @@ export default function NavigationLinks({ lat, lng, venueName, address }: Naviga
   const navApps = [
     {
       name: "네이버지도",
-      url: `https://map.naver.com/v5/search/${encodeURIComponent("선릉 아펠가모")}`,
+      url: `https://map.naver.com/v5/search/${encodeURIComponent(venueName)}`,
     },
     {
       name: "카카오내비",

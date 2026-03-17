@@ -1,5 +1,3 @@
-"use client";
-
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import weddingConfig from "@/config/wedding";
 
@@ -11,7 +9,7 @@ export default function GreetingSection() {
       <p className="section-title">Invitation</p>
       <h2 className="section-heading mb-8">{greeting.title}</h2>
 
-      <p className="text-sm leading-7 text-text-light whitespace-pre-line mb-10">
+      <p className="text-[15px] leading-8 text-text-light whitespace-pre-line mb-10">
         {greeting.message}
       </p>
 
@@ -21,14 +19,14 @@ export default function GreetingSection() {
           <span>{groom.father}</span>
           <span className="text-text-muted">·</span>
           <span>{groom.mother}</span>
-          <span className="text-text-muted text-xs ml-1">의 {groom.role}</span>
+          <span className="text-text-light text-sm ml-1">의 {groom.role}</span>
           <span className="font-medium text-text ml-1">{groom.name}</span>
         </div>
         <div className="flex items-center justify-center gap-2">
           <span>{bride.father}</span>
           <span className="text-text-muted">·</span>
           <span>{bride.mother}</span>
-          <span className="text-text-muted text-xs ml-1">의 {bride.role}</span>
+          <span className="text-text-light text-sm ml-1">의 {bride.role}</span>
           <span className="font-medium text-text ml-1">{bride.name}</span>
         </div>
       </div>

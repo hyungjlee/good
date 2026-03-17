@@ -12,6 +12,7 @@ export default function RsvpSection() {
     side: "groom" as "groom" | "bride",
     attending: true,
     partySize: 1,
+    mealPref: "none" as "korean" | "western" | "none",
     message: "",
   });
   const [loading, setLoading] = useState(false);
@@ -34,7 +35,7 @@ export default function RsvpSection() {
 
       if (res.ok) {
         setToast({ message: "참석 여부가 전달되었습니다. 감사합니다!", visible: true });
-        setForm({ name: "", phone: "", side: "groom", attending: true, partySize: 1, message: "" });
+        setForm({ name: "", phone: "", side: "groom", attending: true, partySize: 1, mealPref: "none", message: "" });
       } else {
         setToast({ message: "전송에 실패했습니다. 다시 시도해주세요.", visible: true });
       }
@@ -92,7 +93,7 @@ export default function RsvpSection() {
                 onClick={() => setForm({ ...form, side: option.value })}
                 className={`flex-1 py-2.5 text-sm rounded-lg border transition-colors ${
                   form.side === option.value
-                    ? "border-primary bg-primary/5 text-primary"
+                    ? "border-primary-dark bg-primary-dark/5 text-primary-dark"
                     : "border-border text-text-light hover:border-primary/50"
                 }`}
               >
@@ -116,7 +117,7 @@ export default function RsvpSection() {
                 onClick={() => setForm({ ...form, attending: option.value })}
                 className={`flex-1 py-2.5 text-sm rounded-lg border transition-colors ${
                   form.attending === option.value
-                    ? "border-primary bg-primary/5 text-primary"
+                    ? "border-primary-dark bg-primary-dark/5 text-primary-dark"
                     : "border-border text-text-light hover:border-primary/50"
                 }`}
               >
@@ -126,20 +127,46 @@ export default function RsvpSection() {
           </div>
         </div>
 
-        {/* Party Size */}
+        {/* Party Size & Meal Pref */}
         {form.attending && (
-          <div>
-            <label className="block text-xs text-text-muted mb-1.5">동행 인원 (본인 포함)</label>
-            <select
-              value={form.partySize}
-              onChange={(e) => setForm({ ...form, partySize: Number(e.target.value) })}
-              className="w-full border border-border rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-primary transition-colors bg-white"
-            >
-              {Array.from({ length: 10 }, (_, i) => i + 1).map((n) => (
-                <option key={n} value={n}>{n}명</option>
-              ))}
-            </select>
-          </div>
+          <>
+            <div>
+              <label className="block text-xs text-text-muted mb-1.5">동행 인원 (본인 포함)</label>
+              <select
+                value={form.partySize}
+                onChange={(e) => setForm({ ...form, partySize: Number(e.target.value) })}
+                className="w-full border border-border rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-primary transition-colors bg-white"
+              >
+                {Array.from({ length: 10 }, (_, i) => i + 1).map((n) => (
+                  <option key={n} value={n}>{n}명</option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-xs text-text-muted mb-1.5">식사 선호</label>
+              <div className="flex gap-2">
+                {[
+                  { value: "korean" as const, label: "한식" },
+                  { value: "western" as const, label: "양식" },
+                  { value: "none" as const, label: "미정" },
+                ].map((option) => (
+                  <button
+                    key={option.value}
+                    type="button"
+                    onClick={() => setForm({ ...form, mealPref: option.value })}
+                    className={`flex-1 py-2.5 text-sm rounded-lg border transition-colors ${
+                      form.mealPref === option.value
+                        ? "border-primary-dark bg-primary-dark/5 text-primary-dark"
+                        : "border-border text-text-light hover:border-primary/50"
+                    }`}
+                  >
+                    {option.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </>
         )}
 
         {/* Message */}
