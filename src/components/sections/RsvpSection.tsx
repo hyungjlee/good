@@ -93,7 +93,7 @@ export default function RsvpSection() {
                 onClick={() => setForm({ ...form, side: option.value })}
                 className={`flex-1 py-2.5 text-sm rounded-lg border transition-colors ${
                   form.side === option.value
-                    ? "border-primary-dark bg-primary-dark/5 text-primary-dark"
+                    ? "border-primary bg-primary/10 text-primary"
                     : "border-border text-text-light hover:border-primary/50"
                 }`}
               >
@@ -117,7 +117,7 @@ export default function RsvpSection() {
                 onClick={() => setForm({ ...form, attending: option.value })}
                 className={`flex-1 py-2.5 text-sm rounded-lg border transition-colors ${
                   form.attending === option.value
-                    ? "border-primary-dark bg-primary-dark/5 text-primary-dark"
+                    ? "border-primary bg-primary/10 text-primary"
                     : "border-border text-text-light hover:border-primary/50"
                 }`}
               >
@@ -135,7 +135,7 @@ export default function RsvpSection() {
               <select
                 value={form.partySize}
                 onChange={(e) => setForm({ ...form, partySize: Number(e.target.value) })}
-                className="w-full border border-border rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-primary transition-colors bg-white"
+                className="w-full border border-border rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-primary transition-colors bg-bg"
               >
                 {Array.from({ length: 10 }, (_, i) => i + 1).map((n) => (
                   <option key={n} value={n}>{n}명</option>
@@ -157,7 +157,7 @@ export default function RsvpSection() {
                     onClick={() => setForm({ ...form, mealPref: option.value })}
                     className={`flex-1 py-2.5 text-sm rounded-lg border transition-colors ${
                       form.mealPref === option.value
-                        ? "border-primary-dark bg-primary-dark/5 text-primary-dark"
+                        ? "border-primary bg-primary/10 text-primary"
                         : "border-border text-text-light hover:border-primary/50"
                     }`}
                   >

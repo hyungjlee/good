@@ -32,8 +32,8 @@ export default function CopyButton({
       onClick={handleCopy}
       className={`text-xs border border-border rounded px-3 py-2 transition-colors ${
         copied
-          ? "bg-primary-dark text-white border-primary-dark"
-          : "text-text-light hover:border-primary hover:text-primary-dark"
+          ? "bg-primary text-bg border-primary"
+          : "text-text-light hover:border-primary hover:text-primary"
       } ${className}`}
     >
       {copied ? "복사됨" : label}

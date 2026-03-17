@@ -20,7 +20,7 @@ export default function HeroSection() {
           className="object-cover"
           sizes="430px"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/5 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-[#1A1A1A]" />
       </div>
 
       {/* Text Overlay */}

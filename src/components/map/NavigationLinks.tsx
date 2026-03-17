@@ -36,7 +36,7 @@ export default function NavigationLinks({ lat, lng, venueName, address }: Naviga
             {app.name}
           </a>
           {idx < navApps.length - 1 && (
-            <span className="mx-3 text-border">|</span>
+            <span className="mx-3 text-text-muted">|</span>
           )}
         </span>
       ))}

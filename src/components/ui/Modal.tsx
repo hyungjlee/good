@@ -30,14 +30,14 @@ export default function Modal({ isOpen, onClose, children, title }: ModalProps) 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-black/40"
+            className="absolute inset-0 bg-black/60"
             onClick={onClose}
           />
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
-            className="relative bg-white rounded-xl p-6 w-full max-w-sm shadow-xl"
+            className="relative bg-bg-card rounded-xl p-6 w-full max-w-sm shadow-xl"
           >
             {title && (
               <h3 className="text-base font-medium mb-4">{title}</h3>

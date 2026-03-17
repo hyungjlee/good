@@ -28,7 +28,7 @@ export default function AccountSection() {
                   className="border border-border rounded-xl px-5 py-4 flex items-center justify-between"
                 >
                   <div>
-                    <p className="text-xs text-primary-dark font-medium tracking-wide mb-1.5">
+                    <p className="text-xs text-primary font-medium tracking-wide mb-1.5">
                       {account.holder}
                     </p>
                     <p className="text-sm text-text tracking-wide">

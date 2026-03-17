@@ -42,7 +42,7 @@ export default function Calendar({ dateStr }: CalendarProps) {
               day === null
                 ? ""
                 : day === weddingDay
-                  ? "bg-primary text-white rounded-full font-medium"
+                  ? "bg-primary text-bg rounded-full font-medium"
                   : i % 7 === 0
                     ? "text-rose-400"
                     : i % 7 === 6

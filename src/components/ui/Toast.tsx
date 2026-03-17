@@ -33,7 +33,7 @@ export default function Toast({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
-          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-text text-white text-sm px-4 py-2.5 rounded-lg shadow-lg"
+          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-text text-bg text-sm px-4 py-2.5 rounded-lg shadow-lg"
         >
           {message}
         </motion.div>

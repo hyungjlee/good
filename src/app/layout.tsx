@@ -61,7 +61,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-bg text-text">
-        <main className="max-w-[430px] mx-auto min-h-dvh bg-bg-card shadow-[0_0_60px_rgba(0,0,0,0.08)]">
+        <main className="max-w-[430px] mx-auto min-h-dvh bg-bg-card shadow-[0_0_60px_rgba(212,169,106,0.04)]">
           {children}
         </main>
       </body>
