@@ -33,11 +33,14 @@ const weddingConfig: WeddingConfig = {
     message:
       "서로 다른 길을 걸어온 두 사람이\n한 길을 함께 걸어가려 합니다.\n\n귀한 걸음 하시어\n저희의 새로운 시작을\n축복해 주시면 감사하겠습니다.",
   },
-  heroImage: "/images/hero.png",
+  heroImage: "/images/hero.svg",
   gallery: [
-    { src: "/images/gallery-1.jpg", alt: "웨딩 사진 1", width: 800, height: 1200 },
-    { src: "/images/gallery-2.jpg", alt: "웨딩 사진 2", width: 800, height: 1153 },
-    { src: "/images/gallery-3.jpg", alt: "웨딩 사진 3", width: 800, height: 1121 },
+    { src: "/images/gallery-1.svg", alt: "웨딩 사진 1", width: 800, height: 1200 },
+    { src: "/images/gallery-2.svg", alt: "웨딩 사진 2", width: 800, height: 1200 },
+    { src: "/images/gallery-3.svg", alt: "웨딩 사진 3", width: 1200, height: 800 },
+    { src: "/images/gallery-4.svg", alt: "웨딩 사진 4", width: 800, height: 1200 },
+    { src: "/images/gallery-5.svg", alt: "웨딩 사진 5", width: 1200, height: 800 },
+    { src: "/images/gallery-6.svg", alt: "웨딩 사진 6", width: 800, height: 1200 },
   ],
   groomAccounts: {
     label: "신랑측",
@@ -54,9 +57,9 @@ const weddingConfig: WeddingConfig = {
   meta: {
     title: "이형준 ♥ 이아름 결혼합니다",
     description: "2026년 9월 13일 일요일 오전 11시, 아펠가모 선릉 4층",
-    ogImage: "/images/og-image.jpg",
+    ogImage: "/images/og-image.svg",
     siteUrl: "https://hj-areum.vercel.app",
-    kakaoShareImage: "/images/kakao-share.jpg",
+    kakaoShareImage: "/images/kakao-share.svg",
   },
   design: {
     primaryColor: "#C9A96E",

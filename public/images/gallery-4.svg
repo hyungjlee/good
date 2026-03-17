@@ -1,0 +1,18 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='800' height='1200' viewBox='0 0 800 1200'>
+  <defs>
+    <linearGradient id='bg' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0%' stop-color='#F5EFE5'/>
+      <stop offset='100%' stop-color='#ECE3D4'/>
+    </linearGradient>
+  </defs>
+  <rect width='800' height='1200' fill='url(#bg)'/>
+  <!-- Hands holding -->
+  <g transform='translate(400,520)' opacity='0.18'>
+    <path d='M-70,20 Q-50,-30 0,-10 Q50,-30 70,20' fill='none' stroke='#C9A96E' stroke-width='8' stroke-linecap='round'/>
+    <path d='M-70,20 Q-90,40 -80,60' fill='none' stroke='#C9A96E' stroke-width='6' stroke-linecap='round'/>
+    <path d='M70,20 Q90,40 80,60' fill='none' stroke='#C9A96E' stroke-width='6' stroke-linecap='round'/>
+    <!-- Heart -->
+    <path d='M0,-60 C-15,-80 -40,-75 -40,-55 C-40,-35 0,-15 0,-15 C0,-15 40,-35 40,-55 C40,-75 15,-80 0,-60Z' fill='#C9A96E' opacity='0.5'/>
+  </g>
+  <text x='400' y='720' text-anchor='middle' fill='#C9A96E' font-size='13' font-family='Georgia, serif' letter-spacing='5' opacity='0.45'>TOGETHER</text>
+</svg>

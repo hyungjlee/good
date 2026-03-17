@@ -1,0 +1,48 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='800' height='1200' viewBox='0 0 800 1200'>
+  <defs>
+    <linearGradient id='bg' x1='0' y1='0' x2='0' y2='1'>
+      <stop offset='0%' stop-color='#F5F0E8'/>
+      <stop offset='100%' stop-color='#EDE6D8'/>
+    </linearGradient>
+    <linearGradient id='gold' x1='0' y1='0' x2='1' y2='1'>
+      <stop offset='0%' stop-color='#D4B978'/>
+      <stop offset='100%' stop-color='#C9A96E'/>
+    </linearGradient>
+  </defs>
+  <rect width='800' height='1200' fill='url(#bg)'/>
+  <!-- Decorative arch -->
+  <ellipse cx='400' cy='380' rx='220' ry='280' fill='none' stroke='url(#gold)' stroke-width='1.5' opacity='0.4'/>
+  <ellipse cx='400' cy='380' rx='200' ry='260' fill='none' stroke='url(#gold)' stroke-width='0.5' opacity='0.3'/>
+  <!-- Couple silhouette -->
+  <g transform='translate(400,520)' opacity='0.15'>
+    <!-- Bride -->
+    <circle cx='-30' cy='-80' r='28' fill='#C9A96E'/>
+    <path d='M-30,-52 C-30,-52 -65,10 -65,60 C-65,60 -55,120 -30,140 C-5,120 5,60 5,60 C5,10 -30,-52 -30,-52Z' fill='#C9A96E'/>
+    <!-- Groom -->
+    <circle cx='30' cy='-85' r='25' fill='#C9A96E'/>
+    <rect x='10' y='-60' width='40' height='100' rx='8' fill='#C9A96E'/>
+  </g>
+  <!-- Floral decorations top -->
+  <g opacity='0.2' transform='translate(400,100)'>
+    <circle cx='-120' cy='0' r='8' fill='#C9A96E'/>
+    <circle cx='-100' cy='-15' r='6' fill='#D4B978'/>
+    <circle cx='-140' cy='-10' r='5' fill='#D4B978'/>
+    <circle cx='120' cy='0' r='8' fill='#C9A96E'/>
+    <circle cx='100' cy='-15' r='6' fill='#D4B978'/>
+    <circle cx='140' cy='-10' r='5' fill='#D4B978'/>
+    <path d='M-80,-5 Q0,-40 80,-5' fill='none' stroke='#C9A96E' stroke-width='0.8'/>
+  </g>
+  <!-- Floral decorations bottom -->
+  <g opacity='0.2' transform='translate(400,1050)'>
+    <circle cx='-100' cy='0' r='10' fill='#C9A96E'/>
+    <circle cx='-75' cy='15' r='7' fill='#D4B978'/>
+    <circle cx='-125' cy='10' r='6' fill='#D4B978'/>
+    <circle cx='100' cy='0' r='10' fill='#C9A96E'/>
+    <circle cx='75' cy='15' r='7' fill='#D4B978'/>
+    <circle cx='125' cy='10' r='6' fill='#D4B978'/>
+    <path d='M-60,5 Q0,30 60,5' fill='none' stroke='#C9A96E' stroke-width='0.8'/>
+  </g>
+  <!-- Text -->
+  <text x='400' y='750' text-anchor='middle' fill='#C9A96E' font-size='16' font-family='Georgia, serif' letter-spacing='6' opacity='0.6'>WEDDING INVITATION</text>
+  <text x='400' y='800' text-anchor='middle' fill='#8B7D6B' font-size='13' font-family='sans-serif' opacity='0.4'>Sample Photo</text>
+</svg>
