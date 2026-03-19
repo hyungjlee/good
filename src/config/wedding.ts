@@ -17,7 +17,7 @@ const weddingConfig: WeddingConfig = {
   venue: {
     name: "디엘웨딩홀",
     hall: "마이아홀 3층",
-    address: "부산 동구 조방로 14",
+    address: "범일동 830-140",
     roadAddress: "부산 동구 조방로 14",
     lat: 35.1387,
     lng: 129.0635,
@@ -40,14 +40,16 @@ const weddingConfig: WeddingConfig = {
     { src: "/images/gallery-3.jpg", alt: "웨딩 사진 3", width: 800, height: 1121 },
   ],
   groomAccounts: {
-    label: "축의금 계좌",
+    label: "신랑측",
     accounts: [
       { bank: "신한은행", number: "110-317-062408", holder: "곽태민" },
     ],
   },
   brideAccounts: {
     label: "신부측",
-    accounts: [],
+    accounts: [
+      { bank: "신한은행", number: "110-307-475356", holder: "김민선" },
+    ],
   },
   meta: {
     title: "곽태민 ♥ 김민선 결혼합니다",
