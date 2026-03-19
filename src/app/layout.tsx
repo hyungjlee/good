@@ -52,7 +52,7 @@ export default function RootLayout({
         />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=MaruBuri:wght@300;400&display=swap"
         />
         <script
           src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"
