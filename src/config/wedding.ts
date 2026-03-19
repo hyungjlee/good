@@ -40,16 +40,14 @@ const weddingConfig: WeddingConfig = {
     { src: "/images/gallery-3.jpg", alt: "웨딩 사진 3", width: 800, height: 1121 },
   ],
   groomAccounts: {
-    label: "신랑측",
+    label: "축의금 계좌",
     accounts: [
-      { bank: "국민은행", number: "445702-94-109453", holder: "곽현", phone: "010-2323-2477" },
+      { bank: "신한은행", number: "110-317-062408", holder: "곽태민" },
     ],
   },
   brideAccounts: {
     label: "신부측",
-    accounts: [
-      { bank: "국민은행", number: "452525-92-102422", holder: "박은경", phone: "010-5501-2477" },
-    ],
+    accounts: [],
   },
   meta: {
     title: "곽태민 ♥ 김민선 결혼합니다",
