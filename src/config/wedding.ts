@@ -23,9 +23,9 @@ const weddingConfig: WeddingConfig = {
     lng: 129.0563,
     tel: "",
     transport: [
-      { type: "지하철", detail: "1호선 범일역 하차 - 2번 출구 이용(도보 7분)" },
-      { type: "지하철", detail: "2호선 문현역 하차 - 3번 출구 이용(도보 5분)" },
-      { type: "주차", detail: "동일타워 내 지하주차장 이용 가능 (예식 하객 기준 2시간 무료 주차 제공)" },
+      { type: "지하철", detail: "1호선 범일역 하차\n- 2번 출구 이용(도보 7분)" },
+      { type: "지하철", detail: "2호선 문현역 하차\n- 3번 출구 이용(도보 5분)" },
+      { type: "주차", detail: "동일타워 내 지하주차장 이용 가능\n(예식 하객 기준 2시간 무료 주차 제공)" },
     ],
   },
   greeting: {

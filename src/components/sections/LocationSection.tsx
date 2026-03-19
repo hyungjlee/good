@@ -60,7 +60,7 @@ export default function LocationSection() {
           {venue.transport.map((info, idx) => (
             <div key={idx} className="flex gap-3 text-[15px]">
               <span className="text-primary-dark font-medium shrink-0 min-w-[3.5rem]">{info.type}</span>
-              <span className="text-text-light">{info.detail}</span>
+              <span className="text-text-light whitespace-pre-line">{info.detail}</span>
             </div>
           ))}
         </div>
