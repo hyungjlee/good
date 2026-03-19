@@ -2,36 +2,36 @@ import type { WeddingConfig } from "@/types/wedding";
 
 const weddingConfig: WeddingConfig = {
   groom: {
-    name: "이형준",
-    role: "장남",
-    father: "이승우",
-    mother: "김영아",
+    name: "곽태민",
+    role: "아들",
+    father: "곽현",
+    mother: "박은경",
   },
   bride: {
-    name: "이아름",
-    role: "차녀",
-    father: "이택호",
-    mother: "길경화",
+    name: "김민선",
+    role: "딸",
+    father: "김정득",
+    mother: "전정임",
   },
-  date: "2026-09-13T11:00:00+09:00",
+  date: "2026-05-02T15:00:00+09:00",
   venue: {
-    name: "아펠가모 선릉",
-    hall: "4층",
-    address: "서울 강남구 역삼동 707-34 한신인터밸리",
-    roadAddress: "서울 강남구 테헤란로 322 한신인터밸리",
-    lat: 37.5034469,
-    lng: 127.0467753,
-    tel: "02-2183-0230",
+    name: "디엘웨딩홀",
+    hall: "마이아홀 3층",
+    address: "부산 동구 조방로 14",
+    roadAddress: "부산 동구 조방로 14",
+    lat: 35.1396,
+    lng: 129.0563,
+    tel: "",
     transport: [
-      { type: "지하철", detail: "2호선·분당선 선릉역 4번 출구 도보 1분" },
-      { type: "버스", detail: "선릉역 정류장 하차" },
-      { type: "주차", detail: "건물 내 지하주차장 이용 가능" },
+      { type: "지하철", detail: "1호선 범일역 하차 - 2번 출구 이용(도보 7분)" },
+      { type: "지하철", detail: "2호선 문현역 하차 - 3번 출구 이용(시민회관 방면 도보 5분)" },
+      { type: "주차", detail: "동일타워 내 지하주차장 이용 가능 (예식 하객 기준 2시간 무료 주차 제공)" },
     ],
   },
   greeting: {
     title: "소중한 분들을 초대합니다",
     message:
-      "서로 다른 길을 걸어온 두 사람이\n한 길을 함께 걸어가려 합니다.\n\n귀한 걸음 하시어\n저희의 새로운 시작을\n축복해 주시면 감사하겠습니다.",
+      "서로의 손을 잡고\n평생을 함께 걸어가려 합니다.\n\n비록 모두 한자리에 모시지는 못하지만,\n저희 결혼을 향한 따뜻한 마음과 축복을\n멀리서라도 보내주신다면\n오래도록 간직하며 살아가겠습니다.",
   },
   heroImage: "/images/hero.png",
   gallery: [
@@ -42,18 +42,18 @@ const weddingConfig: WeddingConfig = {
   groomAccounts: {
     label: "신랑측",
     accounts: [
-      { bank: "국민은행", number: "528702-04-033113", holder: "이형준" },
+      { bank: "국민은행", number: "000000-00-000000", holder: "곽태민" },
     ],
   },
   brideAccounts: {
     label: "신부측",
     accounts: [
-      { bank: "카카오뱅크", number: "3333-25-0192280", holder: "이아름" },
+      { bank: "카카오뱅크", number: "0000-00-0000000", holder: "김민선" },
     ],
   },
   meta: {
-    title: "이형준 ♥ 이아름 결혼합니다",
-    description: "2026년 9월 13일 일요일 오전 11시, 아펠가모 선릉 4층",
+    title: "곽태민 ♥ 김민선 결혼합니다",
+    description: "2026년 5월 2일 토요일 오후 3시, 디엘웨딩홀 마이아홀 3층",
     ogImage: "/images/og-image.jpg",
     siteUrl: "https://hj-areum.vercel.app",
     kakaoShareImage: "/images/kakao-share.jpg",
