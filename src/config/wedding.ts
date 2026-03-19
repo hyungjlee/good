@@ -53,7 +53,7 @@ const weddingConfig: WeddingConfig = {
     title: "곽태민 ♥ 김민선 결혼합니다",
     description: "2026년 5월 2일 토요일 오후 3시, 디엘웨딩홀 마이아홀 3층",
     ogImage: "/images/og-image.jpg",
-    siteUrl: "https://hj-areum.vercel.app",
+    siteUrl: "https://kwak-kim.vercel.app",
     kakaoShareImage: "/images/kakao-share.jpg",
   },
   design: {

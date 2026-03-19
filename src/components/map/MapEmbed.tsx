@@ -31,7 +31,7 @@ export default function MapEmbed({ lat, lng, venueName }: MapEmbedProps) {
     const position = new window.naver.maps.LatLng(lat, lng);
     const map = new window.naver.maps.Map(mapRef.current, {
       center: position,
-      zoom: 13,
+      zoom: 14,
       zoomControl: true,
       zoomControlOptions: {
         position: 9,
