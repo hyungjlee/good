@@ -19,8 +19,8 @@ const weddingConfig: WeddingConfig = {
     hall: "마이아홀 3층",
     address: "부산 동구 조방로 14",
     roadAddress: "부산 동구 조방로 14",
-    lat: 35.1396,
-    lng: 129.0563,
+    lat: 35.1387,
+    lng: 129.0635,
     tel: "",
     transport: [
       { type: "지하철", detail: "1호선 범일역 하차\n- 2번 출구 이용(도보 7분)" },
