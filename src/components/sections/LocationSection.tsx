@@ -15,7 +15,7 @@ export default function LocationSection() {
   const { venue } = weddingConfig;
 
   return (
-    <AnimatedSection className="py-16 px-6">
+    <AnimatedSection className="py-12 px-6">
       <div className="text-center mb-8">
         <p className="section-title">Location</p>
         <h2 className="section-heading">{venue.name}</h2>
@@ -28,7 +28,7 @@ export default function LocationSection() {
       {/* Address */}
       <div className="mt-4 flex items-start justify-between">
         <div>
-          <p className="text-sm text-text">{venue.roadAddress}</p>
+          <p className="text-[15px] text-text">{venue.roadAddress}</p>
           <p className="text-xs text-text-muted mt-0.5">{venue.address}</p>
         </div>
         <CopyButton text={venue.roadAddress} label="주소 복사" className="shrink-0 ml-2" />
@@ -58,8 +58,8 @@ export default function LocationSection() {
       {venue.transport.length > 0 && (
         <div className="mt-6 space-y-2">
           {venue.transport.map((info, idx) => (
-            <div key={idx} className="flex gap-3 text-sm">
-              <span className="text-primary-dark font-medium shrink-0 w-12">{info.type}</span>
+            <div key={idx} className="flex gap-3 text-[15px]">
+              <span className="text-primary-dark font-medium shrink-0 min-w-[3.5rem]">{info.type}</span>
               <span className="text-text-light">{info.detail}</span>
             </div>
           ))}

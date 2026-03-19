@@ -6,9 +6,10 @@ import KakaoShareButton from "@/components/share/KakaoShareButton";
 import Toast from "@/components/ui/Toast";
 import weddingConfig from "@/config/wedding";
 import { copyToClipboard } from "@/lib/clipboard";
+import { formatWeddingDate } from "@/lib/date";
 
 export default function FooterSection() {
-  const { meta } = weddingConfig;
+  const { meta, groom, bride, date } = weddingConfig;
   const [toast, setToast] = useState({ message: "", visible: false });
 
   const handleCopyLink = async () => {
@@ -20,7 +21,7 @@ export default function FooterSection() {
   };
 
   return (
-    <AnimatedSection className="py-16 px-6 pb-safe">
+    <AnimatedSection className="py-12 px-6 pb-safe" variant="fade-slow">
       <div className="text-center mb-6">
         <p className="section-title">Share</p>
         <h2 className="section-heading">소식 전하기</h2>
@@ -39,6 +40,17 @@ export default function FooterSection() {
           </svg>
           링크 복사하기
         </button>
+      </div>
+
+      {/* Closing */}
+      <div className="mt-12 text-center">
+        <div className="w-8 h-px bg-primary/40 mx-auto mb-4" />
+        <p className="font-accent text-sm tracking-wide text-text-muted">
+          {groom.name} &amp; {bride.name}
+        </p>
+        <p className="text-xs text-text-muted mt-1">
+          {formatWeddingDate(date)}
+        </p>
       </div>
 
       <Toast

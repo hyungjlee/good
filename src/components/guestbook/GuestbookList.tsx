@@ -65,7 +65,18 @@ export default function GuestbookList({ refreshKey, onToast }: GuestbookListProp
 
   if (loading) {
     return (
-      <div className="py-8 text-center text-sm text-text-muted">불러오는 중...</div>
+      <div className="py-8 space-y-4">
+        {[...Array(3)].map((_, i) => (
+          <div key={i} className="animate-pulse">
+            <div className="flex items-center justify-between mb-2">
+              <div className="h-4 w-16 bg-divider rounded" />
+              <div className="h-3 w-20 bg-divider rounded" />
+            </div>
+            <div className="h-4 w-full bg-divider rounded mb-1" />
+            <div className="h-4 w-2/3 bg-divider rounded" />
+          </div>
+        ))}
+      </div>
     );
   }
 

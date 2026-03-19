@@ -11,7 +11,7 @@ interface GalleryGridProps {
 
 export default function GalleryGrid({ images, onImageClick }: GalleryGridProps) {
   return (
-    <div className="grid grid-cols-2 gap-[3px]">
+    <div className="grid grid-cols-2 gap-1">
       {images.map((image, index) => (
         <motion.button
           key={index}
@@ -20,7 +20,7 @@ export default function GalleryGrid({ images, onImageClick }: GalleryGridProps) 
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: index * 0.08 }}
           onClick={() => onImageClick(index)}
-          className={`relative overflow-hidden ${
+          className={`relative overflow-hidden transition-transform active:scale-[0.98] active:brightness-95 ${
             index === 0 ? "col-span-2 aspect-[4/5]" : "aspect-[3/4]"
           }`}
         >
@@ -28,7 +28,7 @@ export default function GalleryGrid({ images, onImageClick }: GalleryGridProps) 
             src={image.src}
             alt={image.alt}
             fill
-            className="object-cover transition-transform duration-300 hover:scale-105"
+            className="object-cover"
             sizes={index === 0 ? "(max-width: 430px) 100vw, 430px" : "(max-width: 430px) 50vw, 215px"}
             loading="lazy"
           />

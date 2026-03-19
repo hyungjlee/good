@@ -20,21 +20,17 @@ export default function NavigationLinks({ lat, lng, venueName, address }: Naviga
   ];
 
   return (
-    <div className="flex items-center justify-center gap-0">
-      {navApps.map((app, idx) => (
-        <span key={app.name} className="flex items-center">
-          <a
-            href={app.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-text-light hover:text-primary transition-colors py-2.5 px-3"
-          >
-            {app.name}
-          </a>
-          {idx < navApps.length - 1 && (
-            <span className="mx-3 text-border">|</span>
-          )}
-        </span>
+    <div className="flex items-center justify-center gap-2">
+      {navApps.map((app) => (
+        <a
+          key={app.name}
+          href={app.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-text-light hover:text-primary transition-colors border border-border rounded-lg py-3 px-5"
+        >
+          {app.name}
+        </a>
       ))}
     </div>
   );

@@ -14,7 +14,7 @@ export default function Calendar({ dateStr }: CalendarProps) {
   return (
     <div className="w-full max-w-xs mx-auto">
       <div className="text-center mb-4">
-        <p className="font-accent text-lg tracking-wide">
+        <p className="text-lg font-light tracking-wide">
           {year}. {String(month).padStart(2, "0")}
         </p>
       </div>
@@ -25,7 +25,7 @@ export default function Calendar({ dateStr }: CalendarProps) {
           <div
             key={day}
             className={`text-center text-xs py-1 ${
-              i === 0 ? "text-rose-400" : i === 6 ? "text-blue-400" : "text-text-muted"
+              i === 0 ? "text-rose-500" : i === 6 ? "text-blue-500" : "text-text-muted"
             }`}
           >
             {day}
@@ -44,9 +44,9 @@ export default function Calendar({ dateStr }: CalendarProps) {
                 : day === weddingDay
                   ? "bg-primary text-white rounded-full font-medium"
                   : i % 7 === 0
-                    ? "text-rose-400"
+                    ? "text-rose-500"
                     : i % 7 === 6
-                      ? "text-blue-400"
+                      ? "text-blue-500"
                       : "text-text"
             }`}
           >

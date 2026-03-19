@@ -20,7 +20,7 @@ export default function HeroSection() {
           className="object-cover"
           sizes="430px"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/5 to-black/75" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/80" />
       </div>
 
       {/* Text Overlay */}
@@ -47,11 +47,11 @@ export default function HeroSection() {
 
         {/* Scroll Indicator */}
         <motion.div
-          animate={{ y: [0, 6, 0] }}
+          animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
           className="mt-8 mb-2"
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="mx-auto opacity-60">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="mx-auto opacity-80">
             <path d="M7 13l5 5 5-5M7 6l5 5 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </motion.div>

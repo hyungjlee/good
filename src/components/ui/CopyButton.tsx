@@ -30,7 +30,7 @@ export default function CopyButton({
   return (
     <button
       onClick={handleCopy}
-      className={`text-xs border border-border rounded px-3 py-2 transition-colors ${
+      className={`text-xs border border-border rounded px-4 py-2.5 min-h-[44px] inline-flex items-center transition-colors ${
         copied
           ? "bg-primary-dark text-white border-primary-dark"
           : "text-text-light hover:border-primary hover:text-primary-dark"

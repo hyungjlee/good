@@ -11,7 +11,7 @@ export default function GuestbookSection() {
   const [toast, setToast] = useState({ message: "", visible: false });
 
   return (
-    <AnimatedSection className="py-16 px-6">
+    <AnimatedSection className="py-12 px-6">
       <div className="text-center mb-8">
         <p className="section-title">Guestbook</p>
         <h2 className="section-heading">축하의 한마디</h2>

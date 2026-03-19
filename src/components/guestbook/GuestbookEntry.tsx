@@ -20,13 +20,13 @@ export default function GuestbookEntry({ entry, onDelete }: GuestbookEntryProps)
           </span>
           <button
             onClick={() => onDelete(entry.id)}
-            className="text-xs text-text-muted hover:text-red-400 transition-colors px-2 py-1 -mr-2"
+            className="text-xs text-text-muted hover:text-red-400 transition-colors px-3 py-2 -mr-3"
           >
             삭제
           </button>
         </div>
       </div>
-      <p className="text-sm text-text-light leading-relaxed whitespace-pre-line">{entry.message}</p>
+      <p className="text-[15px] text-text-light leading-relaxed whitespace-pre-line">{entry.message}</p>
     </div>
   );
 }

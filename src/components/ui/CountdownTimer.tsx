@@ -34,7 +34,7 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
       <div className="flex justify-center gap-4">
         {items.map((item) => (
           <div key={item.label} className="text-center">
-            <div className="text-xl font-light text-text tabular-nums">
+            <div className="text-xl font-normal text-text tabular-nums">
               {String(item.value).padStart(2, "0")}
             </div>
             <div className="text-xs text-text-muted mt-0.5">{item.label}</div>

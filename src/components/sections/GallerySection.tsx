@@ -17,7 +17,7 @@ export default function GallerySection() {
   };
 
   return (
-    <AnimatedSection className="py-16">
+    <AnimatedSection className="py-12" variant="fade">
       <div className="text-center px-6 mb-8">
         <p className="section-title">Gallery</p>
         <h2 className="section-heading">우리의 순간</h2>

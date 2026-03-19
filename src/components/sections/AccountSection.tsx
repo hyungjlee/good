@@ -6,10 +6,11 @@ export default function AccountSection() {
   const { groomAccounts, brideAccounts } = weddingConfig;
 
   const groups = [groomAccounts, brideAccounts];
+  const borderColors = ["border-l-blue-200", "border-l-rose-200"];
 
   return (
-    <AnimatedSection className="py-16 px-6">
-      <div className="text-center mb-10">
+    <AnimatedSection className="py-12 px-6">
+      <div className="text-center mb-8">
         <p className="section-title">Account</p>
         <h2 className="section-heading">마음 전하실 곳</h2>
         <p className="text-xs text-text-muted mt-3 leading-relaxed">
@@ -18,10 +19,10 @@ export default function AccountSection() {
       </div>
 
       <div className="space-y-6">
-        {groups.map((group) =>
+        {groups.map((group, groupIdx) =>
           group.accounts.length > 0 && (
-            <div key={group.label}>
-              <p className="text-xs text-text-muted font-medium mb-2.5">{group.label}</p>
+            <div key={group.label} className={`border-l-2 pl-4 ${borderColors[groupIdx]}`}>
+              <p className="text-sm text-text-muted font-medium mb-2.5">{group.label}</p>
               <div className="space-y-3">
                 {group.accounts.map((account, idx) => (
                   <div
@@ -32,7 +33,10 @@ export default function AccountSection() {
                       <p className="text-xs text-primary-dark font-medium mb-1.5">
                         {account.holder}
                         {account.phone && (
-                          <a href={`tel:${account.phone}`} className="ml-2 text-text-muted font-normal">
+                          <a
+                            href={`tel:${account.phone}`}
+                            className="ml-2 text-text-muted font-normal underline decoration-text-muted/30 underline-offset-2"
+                          >
                             {account.phone}
                           </a>
                         )}
@@ -49,7 +53,6 @@ export default function AccountSection() {
           )
         )}
       </div>
-
     </AnimatedSection>
   );
 }
