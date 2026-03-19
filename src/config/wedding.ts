@@ -24,7 +24,7 @@ const weddingConfig: WeddingConfig = {
     tel: "",
     transport: [
       { type: "지하철", detail: "1호선 범일역 하차 - 2번 출구 이용(도보 7분)" },
-      { type: "지하철", detail: "2호선 문현역 하차 - 3번 출구 이용(시민회관 방면 도보 5분)" },
+      { type: "지하철", detail: "2호선 문현역 하차 - 3번 출구 이용(도보 5분)" },
       { type: "주차", detail: "동일타워 내 지하주차장 이용 가능 (예식 하객 기준 2시간 무료 주차 제공)" },
     ],
   },
@@ -42,13 +42,13 @@ const weddingConfig: WeddingConfig = {
   groomAccounts: {
     label: "신랑측",
     accounts: [
-      { bank: "국민은행", number: "000000-00-000000", holder: "곽태민" },
+      { bank: "국민은행", number: "445702-94-109453", holder: "곽현", phone: "010-2323-2477" },
     ],
   },
   brideAccounts: {
     label: "신부측",
     accounts: [
-      { bank: "카카오뱅크", number: "0000-00-0000000", holder: "김민선" },
+      { bank: "국민은행", number: "452525-92-102422", holder: "박은경", phone: "010-5501-2477" },
     ],
   },
   meta: {

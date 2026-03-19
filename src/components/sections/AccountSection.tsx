@@ -18,29 +18,36 @@ export default function AccountSection() {
       </div>
 
       <div className="space-y-6">
-        {groups.map((group) => (
-          <div key={group.label}>
-            <p className="text-xs text-text-muted font-medium mb-2.5">{group.label}</p>
-            <div className="space-y-3">
-              {group.accounts.map((account, idx) => (
-                <div
-                  key={idx}
-                  className="border border-border rounded-xl px-5 py-4 flex items-center justify-between"
-                >
-                  <div>
-                    <p className="text-xs text-primary-dark font-medium tracking-wide mb-1.5">
-                      {account.holder}
-                    </p>
-                    <p className="text-sm text-text tracking-wide">
-                      {account.bank} {account.number}
-                    </p>
+        {groups.map((group) =>
+          group.accounts.length > 0 && (
+            <div key={group.label}>
+              <p className="text-xs text-text-muted font-medium mb-2.5">{group.label}</p>
+              <div className="space-y-3">
+                {group.accounts.map((account, idx) => (
+                  <div
+                    key={idx}
+                    className="border border-border rounded-xl px-5 py-4 flex items-center justify-between"
+                  >
+                    <div>
+                      <p className="text-xs text-primary-dark font-medium mb-1.5">
+                        {account.holder}
+                        {account.phone && (
+                          <a href={`tel:${account.phone}`} className="ml-2 text-text-muted font-normal">
+                            {account.phone}
+                          </a>
+                        )}
+                      </p>
+                      <p className="text-sm text-text tracking-wide">
+                        {account.bank} {account.number}
+                      </p>
+                    </div>
+                    <CopyButton text={account.number} />
                   </div>
-                  <CopyButton text={account.number} />
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          )
+        )}
       </div>
 
     </AnimatedSection>

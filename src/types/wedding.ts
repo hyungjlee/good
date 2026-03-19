@@ -9,6 +9,7 @@ export interface Account {
   bank: string;
   number: string;
   holder: string;
+  phone?: string;
 }
 
 export interface AccountGroup {

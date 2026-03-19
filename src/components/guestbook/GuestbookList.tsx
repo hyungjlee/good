@@ -101,7 +101,7 @@ export default function GuestbookList({ refreshKey, onToast }: GuestbookListProp
           type="password"
           value={deletePassword}
           onChange={(e) => setDeletePassword(e.target.value)}
-          className="w-full border border-border rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-primary transition-colors mb-4"
+          className="w-full border border-border rounded-lg px-3 py-2.5 text-base focus:outline-none focus:border-primary transition-colors mb-4"
           placeholder="비밀번호"
           autoFocus
         />

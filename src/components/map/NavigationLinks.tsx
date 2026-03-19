@@ -17,10 +17,6 @@ export default function NavigationLinks({ lat, lng, venueName, address }: Naviga
       name: "카카오내비",
       url: `https://map.kakao.com/link/to/${encodeURIComponent(venueName)},${lat},${lng}`,
     },
-    {
-      name: "티맵",
-      url: `tmap://route?goalname=${encodeURIComponent(venueName)}&goalx=${lng}&goaly=${lat}`,
-    },
   ];
 
   return (
