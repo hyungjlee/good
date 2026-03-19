@@ -15,7 +15,7 @@ export function initKakao(): boolean {
   if (!window.Kakao) return false;
   if (window.Kakao.isInitialized()) return true;
 
-  const key = process.env.NEXT_PUBLIC_KAKAO_APP_KEY;
+  const key = process.env.NEXT_PUBLIC_KAKAO_APP_KEY?.trim();
   if (!key) {
     console.warn("NEXT_PUBLIC_KAKAO_APP_KEY 환경변수가 설정되지 않았습니다.");
     return false;
