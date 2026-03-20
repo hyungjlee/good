@@ -47,7 +47,7 @@ export default function GuestbookForm({ onSubmitted, onToast }: GuestbookFormPro
         type="text"
         value={form.name}
         onChange={(e) => setForm({ ...form, name: e.target.value })}
-        className="w-full border border-border rounded-lg px-3 py-2.5 text-base focus:outline-none focus:border-primary transition-colors"
+        className="w-full border border-border rounded-lg px-3 py-2.5 text-base placeholder:text-sm focus:outline-none focus:border-primary transition-colors"
         placeholder="이름"
         maxLength={20}
         required
@@ -56,7 +56,7 @@ export default function GuestbookForm({ onSubmitted, onToast }: GuestbookFormPro
         type="password"
         value={form.password}
         onChange={(e) => setForm({ ...form, password: e.target.value })}
-        className="w-full border border-border rounded-lg px-3 py-2.5 text-base focus:outline-none focus:border-primary transition-colors"
+        className="w-full border border-border rounded-lg px-3 py-2.5 text-base placeholder:text-sm focus:outline-none focus:border-primary transition-colors"
         placeholder="비밀번호 (삭제 시 필요)"
         maxLength={20}
         required
@@ -65,7 +65,7 @@ export default function GuestbookForm({ onSubmitted, onToast }: GuestbookFormPro
         <textarea
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
-          className="w-full border border-border rounded-lg px-3 py-2 pb-7 text-base focus:outline-none focus:border-primary transition-colors resize-none"
+          className="w-full border border-border rounded-lg px-3 py-2 pb-7 text-base placeholder:text-sm focus:outline-none focus:border-primary transition-colors resize-none"
           rows={3}
           placeholder="축하 메시지를 남겨주세요 (최대 500자)"
           maxLength={500}
