@@ -6,21 +6,19 @@ import type { GalleryImage } from "@/types/wedding";
 
 interface GalleryGridProps {
   images: GalleryImage[];
-  onImageClick: (index: number) => void;
 }
 
-export default function GalleryGrid({ images, onImageClick }: GalleryGridProps) {
+export default function GalleryGrid({ images }: GalleryGridProps) {
   return (
     <div className="grid grid-cols-2 gap-1">
       {images.map((image, index) => (
-        <motion.button
+        <motion.div
           key={index}
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: index * 0.08 }}
-          onClick={() => onImageClick(index)}
-          className={`relative overflow-hidden transition-transform active:scale-[0.98] active:brightness-95 ${
+          className={`relative overflow-hidden ${
             index === 0 ? "col-span-2 aspect-[4/5]" : "aspect-[3/4]"
           }`}
         >
@@ -32,7 +30,7 @@ export default function GalleryGrid({ images, onImageClick }: GalleryGridProps) 
             sizes={index === 0 ? "(max-width: 430px) 100vw, 430px" : "(max-width: 430px) 50vw, 215px"}
             loading="lazy"
           />
-        </motion.button>
+        </motion.div>
       ))}
     </div>
   );
