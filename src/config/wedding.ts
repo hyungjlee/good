@@ -43,6 +43,8 @@ const weddingConfig: WeddingConfig = {
     label: "신랑측",
     accounts: [
       { bank: "신한은행", number: "110-317-062408", holder: "곽태민" },
+      { bank: "국민은행", number: "445702-94-109453", holder: "곽현", phone: "010-2323-2477", relation: "아버지" },
+      { bank: "국민은행", number: "452525-92-102422", holder: "박은경", phone: "010-5501-2477", relation: "어머니" },
     ],
   },
   brideAccounts: {

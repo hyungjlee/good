@@ -10,6 +10,7 @@ export interface Account {
   number: string;
   holder: string;
   phone?: string;
+  relation?: string;
 }
 
 export interface AccountGroup {

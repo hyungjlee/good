@@ -31,7 +31,7 @@ export default function AccountSection() {
                   >
                     <div>
                       <p className="text-xs text-primary-dark font-medium mb-1.5">
-                        {account.holder}
+                        {account.holder}{account.relation && ` (${account.relation})`}
                         {account.phone && (
                           <a
                             href={`tel:${account.phone}`}
